@@ -1,0 +1,32 @@
+[gd_scene load_steps=3 format=3 uid="uid://djhi0ur6d3x6c"]
+
+[ext_resource type="Texture2D" uid="uid://owpkds2q2ka6" path="res://rubber-ducks-arrangement-still-life.jpg" id="1_2kqrc"]
+[ext_resource type="Script" uid="uid://br03t1wyae64" path="res://nou/start.gd" id="1_7rmkx"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_7rmkx")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(578, 321)
+scale = Vector2(0.171726, 0.145536)
+texture = ExtResource("1_2kqrc")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 112.0
+offset_top = 8.0
+offset_right = 988.0
+offset_bottom = 479.0
+theme_override_font_sizes/font_size = 83
+text = "Rescata a tots els aneguets, no te'n deixis ni un!"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="Button" type="Button" parent="."]
+offset_left = 418.0
+offset_top = 365.0
+offset_right = 698.0
+offset_bottom = 443.0
+theme_override_font_sizes/font_size = 49
+text = "START"
+
+[connection signal="button_down" from="Button" to="." method="_on_button_button_down"]

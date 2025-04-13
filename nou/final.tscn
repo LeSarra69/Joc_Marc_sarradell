@@ -1,0 +1,21 @@
+[gd_scene load_steps=2 format=3 uid="uid://dccffhxpnk2tg"]
+
+[ext_resource type="Texture2D" uid="uid://owpkds2q2ka6" path="res://rubber-ducks-arrangement-still-life.jpg" id="2_7h7nw"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Label" type="Label" parent="."]
+top_level = true
+offset_left = 14.0
+offset_right = 1101.0
+offset_bottom = 490.0
+theme_type_variation = &"HeaderLarge"
+theme_override_font_sizes/font_size = 100
+text = "Enhorabona, has salvat a tots els aneguets!"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(578, 362)
+scale = Vector2(0.171429, 0.161607)
+texture = ExtResource("2_7h7nw")

@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://s3rpmgkgcaiv"]
+
+[ext_resource type="Script" uid="uid://x0dtwbisyhv8" path="res://hud.gd" id="1_e4mun"]
+
+[node name="HUD" type="CanvasLayer"]
+script = ExtResource("1_e4mun")
+
+[node name="punts" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Punts:"

@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://cwqs0l0l8hxlc"]
+
+[ext_resource type="Script" uid="uid://bpvkqf64ae0hc" path="res://nou/patos.gd" id="1_1lljg"]
+[ext_resource type="Texture2D" uid="uid://dciu6ccefai8d" path="res://patazo.png" id="2_1lljg"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_1lljg"]
+radius = 25.5
+height = 57.0
+
+[node name="Anec" type="Area2D"]
+script = ExtResource("1_1lljg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(134.5, 116.5)
+shape = SubResource("CapsuleShape2D_1lljg")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(131.5, 117.75)
+scale = Vector2(0.129518, 0.0990739)
+texture = ExtResource("2_1lljg")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

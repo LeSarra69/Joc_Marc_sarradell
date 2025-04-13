@@ -1,0 +1,61 @@
+[gd_scene load_steps=7 format=3 uid="uid://b5slvivj4ivnr"]
+
+[ext_resource type="Script" uid="uid://1k1d77g8thwn" path="res://fondo.gd" id="1_pwp84"]
+[ext_resource type="PackedScene" uid="uid://cvnutx1b58u1i" path="res://nou/fondo.tscn" id="1_tmf4k"]
+[ext_resource type="PackedScene" uid="uid://hg11s4q0ge3o" path="res://nou/personatge.tscn" id="2_nl77p"]
+[ext_resource type="PackedScene" uid="uid://cwqs0l0l8hxlc" path="res://nou/patos.tscn" id="3_nl77p"]
+[ext_resource type="PackedScene" uid="uid://s3rpmgkgcaiv" path="res://nou/margin_container.tscn" id="5_41njw"]
+[ext_resource type="PackedScene" uid="uid://cdeeqw0jyuqha" path="res://nou/temps.tscn" id="6_5hm0i"]
+
+[node name="Joc" type="Node2D"]
+script = ExtResource("1_pwp84")
+
+[node name="Fons" parent="." instance=ExtResource("1_tmf4k")]
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("2_nl77p")]
+position = Vector2(565, 543)
+
+[node name="HUD" parent="." instance=ExtResource("5_41njw")]
+
+[node name="Anec" parent="." instance=ExtResource("3_nl77p")]
+position = Vector2(65, 49)
+
+[node name="Anec10" parent="." instance=ExtResource("3_nl77p")]
+position = Vector2(986, 425)
+
+[node name="Anec9" parent="." instance=ExtResource("3_nl77p")]
+position = Vector2(-94, 424)
+
+[node name="Anec8" parent="." instance=ExtResource("3_nl77p")]
+position = Vector2(25, -121)
+
+[node name="Anec7" parent="." instance=ExtResource("3_nl77p")]
+position = Vector2(888, -122)
+
+[node name="Anec6" parent="." instance=ExtResource("3_nl77p")]
+position = Vector2(430, 112)
+
+[node name="Anec5" parent="." instance=ExtResource("3_nl77p")]
+position = Vector2(694, 272)
+
+[node name="Anec4" parent="." instance=ExtResource("3_nl77p")]
+position = Vector2(807, 47)
+
+[node name="Anec3" parent="." instance=ExtResource("3_nl77p")]
+position = Vector2(442, -126)
+
+[node name="Anec2" parent="." instance=ExtResource("3_nl77p")]
+position = Vector2(4, 278)
+
+[node name="CanvasLayer" parent="." instance=ExtResource("6_5hm0i")]
+
+[connection signal="body_entered" from="Anec" to="HUD" method="_on_anec_body_entered"]
+[connection signal="body_entered" from="Anec10" to="HUD" method="_on_anec_body_entered"]
+[connection signal="body_entered" from="Anec9" to="HUD" method="_on_anec_body_entered"]
+[connection signal="body_entered" from="Anec8" to="HUD" method="_on_anec_body_entered"]
+[connection signal="body_entered" from="Anec7" to="HUD" method="_on_anec_body_entered"]
+[connection signal="body_entered" from="Anec6" to="HUD" method="_on_anec_body_entered"]
+[connection signal="body_entered" from="Anec5" to="HUD" method="_on_anec_body_entered"]
+[connection signal="body_entered" from="Anec4" to="HUD" method="_on_anec_body_entered"]
+[connection signal="body_entered" from="Anec3" to="HUD" method="_on_anec_body_entered"]
+[connection signal="body_entered" from="Anec2" to="HUD" method="_on_anec_body_entered"]
